@@ -1,1 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;700;800;900&display=swap');
 @import "tailwindcss";
+
+@theme {
+  /* Pengaturan Font */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Pengaturan Warna Background */
+  --color-navy-base: #020c1b;     /* Background paling gelap (utama) */
+  --color-navy-light: #0a192f;    /* Background elemen/card */
+  --color-navy-lighter: #112240;  /* Background elemen yang di-hover / badge */
+
+  /* Pengaturan Warna Aksen (Berdasarkan referensi) */
+  --color-primary-blue: #007bff;        /* Biru terang untuk tombol/teks CTA */
+  --color-primary-hover: #0056b3;       /* Biru lebih gelap untuk efek hover tombol */
+  --color-secondary-pink: #ec4899;      /* Warna pink dari icon sosial media */
+  
+  /* Pengaturan Warna Teks */
+  --color-text-light: #e6f1ff;    /* Putih sedikit kebiruan untuk judul utama */
+  --color-text-muted: #8892b0;    /* Abu-abu kebiruan untuk teks paragraf/deskripsi */
+}
+
+/*
+  Menerapkan warna dan font default ke seluruh halaman
+*/
+@layer base {
+  body {
+    @apply bg-navy-base text-text-light font-body antialiased selection:bg-primary-blue selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
