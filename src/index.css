@@ -19,6 +19,13 @@
   /* Pengaturan Warna Teks */
   --color-text-light: #e6f1ff;    /* Putih sedikit kebiruan untuk judul utama */
   --color-text-muted: #8892b0;    /* Abu-abu kebiruan untuk teks paragraf/deskripsi */
+
+  --animate-marquee: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% {transform: translateX(0%); }
+  100% {transform: translateX(-50%); }
 }
 
 /*
@@ -32,4 +39,6 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
   }
+
+
 }
