@@ -1,6 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 import { PROFILE } from "./data/portofolio";
-// import photo from "../assets/photo-linkedin-1-no-bg.png";
+import photo from "../assets/photo-linkedin-1-no-bg.png";
 
 function HeroSection() {
   return (
@@ -99,7 +99,7 @@ function HeroSection() {
             {/* Kontainer Foto Utama */}
             <div className="relative w-64 h-80 lg:w-90 lg:h-120 rounded-3xl lg:rounded-4xl overflow-hidden">
               <img
-                src="src\assets\photo-linkedin-2-no-bg.png"
+                src={photo}
                 alt="Profile"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
