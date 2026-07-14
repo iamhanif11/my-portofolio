@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { FaEnvelope, FaMapMarkerAlt, FaPaperPlane, FaWhatsapp } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaPaperPlane,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 function FooterSection() {
   const [formData, setFormData] = useState({
@@ -19,10 +24,11 @@ function FooterSection() {
     const mailtoLink = `mailto:mhirfan173@gmail.com?subject=${encodeURIComponent(
       formData.subject || "Contact from Portofolio",
     )}&body=${encodeURIComponent(
-      `Name:${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`,
     )}`;
 
-    window.location.href = mailtoLink
+    // Mengganti window.open menjadi penugasan langsung ke window.location.href
+    window.location.href = mailtoLink;
   };
   return (
     <footer className="relative py-24 px-6 lg:px-24 overflow-hidden bg-linear-to-b from-[#020813] via-[#11284c]/30 to-[#020813] border-t border-slate-800/60 ">
@@ -151,17 +157,16 @@ function FooterSection() {
                 className="w-full flex items-center justify-center gap-2 p-4 font-semibold rounded-xl placeholder-slate-500 focus:outline-hidden bg-primary-blue hover:bg-primary-hover shadow-lg text-sm cursor-pointer"
               >
                 Send Message
-                <FaPaperPlane size={16} className=" ml-1"/>
+                <FaPaperPlane size={16} className=" ml-1" />
               </button>
             </form>
           </div>
-
         </div>
 
         <div className="mt-20 pt-8 border-t border-slate-900/60 text-center">
-            <p className="text-xs text-slate-600">
-                © {new Date().getFullYear()} M. Hanif Irfan. All rights reserved.
-            </p>
+          <p className="text-xs text-slate-600">
+            © {new Date().getFullYear()} M. Hanif Irfan. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
