@@ -1,3 +1,4 @@
+import EducationSection from "./components/EducationSection"
 import HeroSection from "./components/HeroSection"
 import ProjectSection from "./components/ProjectSection"
 import TechStack from "./components/TechStack"
@@ -8,6 +9,7 @@ function App() {
       <HeroSection/>
       <TechStack/>
       <ProjectSection/>
+      <EducationSection/>
     </main>
   )
 }
