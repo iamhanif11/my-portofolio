@@ -25,7 +25,7 @@ const projects = [
     image: shortlinkImg,
     description:
       "A full-stack URL shortening platform that enables users to generate, manage, and track shortened URLs securely. The project emphasizes clean architecture, secure authentication, and scalable backend design while providing a modern and responsive user interface.",
-    link: "https://e-wallet-project-with-react.vercel.app/",
+    link: "https://shortlink-frontend-sage.vercel.app/",
     github: "https://github.com/iamhanif11/shortlink-frontend",
   },
 ];
